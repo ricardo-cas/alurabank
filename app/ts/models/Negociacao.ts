@@ -1,4 +1,4 @@
-class Negociacao {
+class Negociação {
   constructor(
     private _data: Date,
     private _quantidade: number,
