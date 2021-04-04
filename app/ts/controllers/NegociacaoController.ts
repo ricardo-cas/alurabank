@@ -3,6 +3,7 @@ class NegociaçãoController {
   private _inputQuantidade: HTMLInputElement;
   private _inputValor: HTMLInputElement;
   private _negociações = new Negociações();
+  private _negociaçõesView = new NegociaçõesView("#negociacoesView");
 
   constructor() {
     this._inputData = <HTMLInputElement>document.querySelector("#data");
@@ -10,6 +11,8 @@ class NegociaçãoController {
       document.querySelector("#quantidade")
     );
     this._inputValor = <HTMLInputElement>document.querySelector("#valor");
+    // atualiza a view para exibir os dados do modelo, vazio
+    this._negociaçõesView.update(this._negociações);
   }
 
   adiciona(event: Event) {
