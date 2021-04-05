@@ -1,6 +1,5 @@
 class Negociações {
   private _negociações: Array<Negociação> = [];
-  constructor() {}
 
   adiciona(negociação: Negociação): void {
     this._negociações.push(negociação);
